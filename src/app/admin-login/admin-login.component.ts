@@ -17,7 +17,9 @@ export class AdminLoginComponent {
       "username":this.username,
       "password":this.password
     }
+    console.log(data)
   }
+  
   
 
 }
