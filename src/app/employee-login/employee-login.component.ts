@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-employee-login',
@@ -7,17 +8,24 @@ import { Component } from '@angular/core';
 })
 export class EmployeeLoginComponent {
 
-  username=""
+  empcode=""
   password=""
+  constructor(private api:ApiService){}
 
 
   emplogin=()=>
   {
     let data:any={
-      "username":this.username,
+      "empcode":this.empcode,
       "password":this.password
     }
     console.log(data)
+    this.api.employeeLogin(data).subscribe(
+      (response:any)=>{
+        console.log(response)
+      }
+    )
+    
   }
 
 }
