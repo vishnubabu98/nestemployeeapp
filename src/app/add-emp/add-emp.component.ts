@@ -9,6 +9,7 @@ export class AddEmpComponent {
 
  
   empcode=""
+  empname=""
   designation=""
   salary=""
   department=""
@@ -22,6 +23,7 @@ export class AddEmpComponent {
     {
   
       "empcode":this.empcode,
+      "empname":this.empname,
       "designation":this.designation,
       "salary":this.salary,
       "department":this.department,
